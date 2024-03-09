@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD8A0556-2DB4-4E7D-9F6D-86B285DED298}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeItEasy, Version=7.0.0.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeItEasy.7.2.0\lib\net45\FakeItEasy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="audio.cs" />
+    <Compile Include="dead.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="menu.cs" />
+    <Compile Include="mis.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="room.cs" />
+    <Compile Include="room1.cs" />
+    <Compile Include="room10.cs" />
+    <Compile Include="room11.cs" />
+    <Compile Include="room12.cs" />
+    <Compile Include="room13.cs" />
+    <Compile Include="room14.cs" />
+    <Compile Include="room15.cs" />
+    <Compile Include="room16.cs" />
+    <Compile Include="room17.cs" />
+    <Compile Include="room18.cs" />
+    <Compile Include="room19.cs" />
+    <Compile Include="room2.cs" />
+    <Compile Include="room3.cs" />
+    <Compile Include="room4.cs" />
+    <Compile Include="room5.cs" />
+    <Compile Include="room6.cs" />
+    <Compile Include="room7.cs" />
+    <Compile Include="room8.cs" />
+    <Compile Include="room9.cs" />
+    <Compile Include="story.cs" />
+    <Compile Include="time.cs" />
+    <Compile Include="title.cs" />
+    <Compile Include="end.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mis7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3botton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3hide_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3ito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3mato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3oke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3Loc_open1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3hidebig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3hidebigopen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm1posutor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm1stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm1box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm1kagi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3bigloc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3bigloc_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3bigloc_open2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3book4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3book5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3book2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3book3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm3bal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\魔王魂  ピアノ23.mp3" />
+    <None Include="Resources\storyend.mp3" />
+    <None Include="Resources\wood_fire.mp3" />
+    <None Include="Resources\triangle_change.mp3" />
+    <None Include="Resources\tower_disappear.mp3" />
+    <None Include="Resources\switch_onf.mp3" />
+    <None Include="Resources\success.mp3" />
+    <None Include="Resources\stairs_open.mp3" />
+    <None Include="Resources\stair_discovery.mp3" />
+    <None Include="Resources\slide_door.mp3" />
+    <None Include="Resources\wood_put.mp3" />
+    <None Include="Resources\water_spill.mp3" />
+    <None Include="Resources\water_fall.mp3" />
+    <None Include="Resources\warning.mp3" />
+    <None Include="Resources\vase_break.mp3" />
+    <None Include="Resources\valve_set.mp3" />
+    <None Include="Resources\white.png" />
+    <None Include="Resources\storyC.png" />
+    <None Include="Resources\storyBAD.png" />
+    <None Include="Resources\storyB.png" />
+    <None Include="Resources\storyA.png" />
+    <None Include="Resources\storyS.png" />
+    <None Include="Resources\storyEND.png" />
+    <None Include="Resources\storyDEAD.png" />
+    <None Include="Resources\story7-21.bmp" />
+    <None Include="Resources\story7-11.bmp" />
+    <None Include="Resources\story6_21.bmp" />
+    <None Include="Resources\story6_11.bmp" />
+    <None Include="Resources\story51.bmp" />
+    <None Include="Resources\story41.bmp" />
+    <None Include="Resources\story31.bmp" />
+    <None Include="Resources\white.bmp" />
+    <None Include="Resources\story3.bmp" />
+    <None Include="Resources\st_shi4.bmp" />
+    <None Include="Resources\st_memo4.bmp" />
+    <None Include="Resources\story6_1.bmp" />
+    <None Include="Resources\story4.bmp" />
+    <None Include="Resources\story3.png" />
+    <None Include="Resources\story2.bmp" />
+    <None Include="Resources\story1.bmp" />
+    <None Include="Resources\st_shi5.bmp" />
+    <None Include="Resources\st_shi3.bmp" />
+    <None Include="Resources\st_shi2.bmp" />
+    <None Include="Resources\st_shi1.bmp" />
+    <None Include="Resources\st_memo3.bmp" />
+    <None Include="Resources\st_memo2.bmp" />
+    <None Include="Resources\st_memo1.bmp" />
+    <None Include="Resources\story7-2.bmp" />
+    <None Include="Resources\story7-1.bmp" />
+    <None Include="Resources\story6_2.bmp" />
+    <None Include="Resources\story5.bmp" />
+    <None Include="Resources\title.mp3" />
+    <None Include="Resources\tong.png" />
+    <None Include="Resources\爆発.mp3" />
+    <None Include="Resources\潰れる.mp3" />
+    <None Include="Resources\仮エンド画像.png" />
+    <None Include="Resources\エンドB.png" />
+    <None Include="Resources\RM8_q.bmp" />
+    <None Include="Resources\RM8.bmp" />
+    <None Include="Resources\RM2_3.bmp" />
+    <None Include="Resources\rm2book.png" />
+    <None Include="Resources\rm2light on paper.bmp" />
+    <None Include="Resources\rm2light.bmp" />
+    <None Include="Resources\book_1.png" />
+    <None Include="Resources\book1.png" />
+    <None Include="Resources\RM2_1.bmp" />
+    <None Include="Resources\RM2_2.bmp" />
+    <None Include="Resources\RM4_2.bmp" />
+    <None Include="Resources\RM13.bmp" />
+    <None Include="Resources\rm13nazo7.png" />
+    <None Include="Resources\RM4.bmp" />
+    <None Include="Resources\RM4_1.bmp" />
+    <None Include="Resources\rm13hasigo.png" />
+    <None Include="Resources\END_A.png" />
+    <None Include="Resources\item5.png" />
+    <None Include="Resources\item14.png" />
+    <None Include="Resources\menuin.mp3" />
+    <None Include="Resources\menuout.mp3" />
+    <None Include="Resources\rm5tana2.bmp" />
+    <None Include="Resources\rm5tana2.png" />
+    <None Include="Resources\book2.png" />
+    <None Include="Resources\rm2book1.png" />
+    <None Include="Resources\rm2book2.png" />
+    <None Include="Resources\rm2book3.png" />
+    <None Include="Resources\rm2book4.png" />
+    <None Include="Resources\rm5optana2.png" />
+    <None Include="Resources\item27.png" />
+    <None Include="Resources\item24.png" />
+    <None Include="Resources\item25.png" />
+    <None Include="Resources\item26.png" />
+    <None Include="Resources\rm6dool_3.png" />
+    <None Include="Resources\rm6dool_4.png" />
+    <None Include="Resources\rm6dool_1.png" />
+    <None Include="Resources\rm6dool_2.png" />
+    <None Include="Resources\misdis.mp3" />
+    <None Include="Resources\itemdis.mp3" />
+    <None Include="Resources\rm6kamado_saku.png" />
+    <None Include="Resources\rm6fire.png" />
+    <None Include="Resources\rm6fire_big.png" />
+    <None Include="Resources\rm6fire2.png" />
+    <None Include="Resources\rm6kamado_big.png" />
+    <None Include="Resources\rm6kamado_maki.png" />
+    <None Include="Resources\RM6.bmp" />
+    <None Include="Resources\RM6_f.bmp" />
+    <None Include="Resources\rm6d_dish.png" />
+    <None Include="Resources\rm6dish_1.png" />
+    <None Include="Resources\rm6dish_2.png" />
+    <None Include="Resources\rm6dish_3.png" />
+    <None Include="Resources\rm6dish_4.png" />
+    <None Include="Resources\rm11clos.png" />
+    <None Include="Resources\rm11clos_open.png" />
+    <None Include="Resources\rm11nazo11.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\mis3.png" />
+    <None Include="Resources\entyu.png" />
+    <None Include="Resources\mis9.png" />
+    <None Include="Resources\D6_2.png" />
+    <None Include="Resources\light_menu.png" />
+    <None Include="Resources\END_G.png" />
+    <None Include="Resources\END_C.png" />
+    <None Include="Resources\END_D.png" />
+    <None Include="Resources\END_E.png" />
+    <None Include="Resources\END_F.png" />
+    <None Include="Resources\play_2.png" />
+    <None Include="Resources\krst_op.png" />
+    <None Include="Resources\krst_shi.bmp" />
+    <None Include="Resources\kst_cl.png" />
+    <None Include="Resources\kstse.png" />
+    <None Include="Resources\kyst_op.png" />
+    <None Include="Resources\kbst_op.png" />
+    <None Include="Resources\kbst_shi.bmp" />
+    <None Include="Resources\kbstory.bmp" />
+    <None Include="Resources\kost_let1.bmp" />
+    <None Include="Resources\kost_let2.bmp" />
+    <None Include="Resources\kost_let3.bmp" />
+    <None Include="Resources\kostory.bmp" />
+    <None Include="Resources\kost_op.png" />
+    <None Include="Resources\krstory.bmp" />
+    <None Include="Resources\keystory.png" />
+    <None Include="Resources\mainstory.png" />
+    <None Include="Resources\kyst_shi.png" />
+    <None Include="Resources\kystory.bmp" />
+    <None Include="Resources\kyst_shi.bmp" />
+    <None Include="Resources\rm19hosi_13.bmp" />
+    <None Include="Resources\rm19hosi_21.bmp" />
+    <None Include="Resources\rm19hosi_1.bmp" />
+    <None Include="Resources\rm19hosi_2.bmp" />
+    <None Include="Resources\rm19hosi_3.bmp" />
+    <None Include="Resources\rm19hosi_4.bmp" />
+    <None Include="Resources\rm19hosi_5.bmp" />
+    <None Include="Resources\rm19hosi_9.bmp" />
+    <None Include="Resources\rm19hosi_10.bmp" />
+    <None Include="Resources\rm19hosi_11.bmp" />
+    <None Include="Resources\rm19hosi_12.bmp" />
+    <None Include="Resources\rm19hosi_17.bmp" />
+    <None Include="Resources\rm19hosi_18.bmp" />
+    <None Include="Resources\rm19hosi_19.bmp" />
+    <None Include="Resources\rm19hosi_20.bmp" />
+    <None Include="Resources\rm19hosi_24.bmp" />
+    <None Include="Resources\rm19hosi_6.bmp" />
+    <None Include="Resources\rm19hosi_7.bmp" />
+    <None Include="Resources\rm19hosi_8.bmp" />
+    <None Include="Resources\rm19hosi_14.bmp" />
+    <None Include="Resources\rm19hosi_15.bmp" />
+    <None Include="Resources\rm19hosi_16.bmp" />
+    <None Include="Resources\rm19hosi_22.bmp" />
+    <None Include="Resources\rm19hosi_23.bmp" />
+    <None Include="Resources\rm19hosi_25.bmp" />
+    <None Include="Resources\black.bmp" />
+    <None Include="Resources\prologue.bmp" />
+    <None Include="Resources\endstoryA.bmp" />
+    <None Include="Resources\endstoryB.bmp" />
+    <None Include="Resources\endstoryBAD.bmp" />
+    <None Include="Resources\endstoryC.bmp" />
+    <None Include="Resources\endstoryDEAD.bmp" />
+    <None Include="Resources\endstoryEND.bmp" />
+    <None Include="Resources\endstoryS.bmp" />
+    <None Include="Resources\afendstoryse_a.bmp" />
+    <None Include="Resources\afendstoryse_b.bmp" />
+    <None Include="Resources\afendstoryse_BAD.bmp" />
+    <None Include="Resources\afendstoryse_c.bmp" />
+    <None Include="Resources\afendstoryse_DEAD.bmp" />
+    <None Include="Resources\afendstoryse_END.bmp" />
+    <None Include="Resources\afendstoryse_s.bmp" />
+    <None Include="Resources\afstory.bmp" />
+    <None Include="Resources\afstoryse.bmp" />
+    <None Include="Resources\afstoryse_ura.bmp" />
+    <None Include="Resources\afstoryse.png" />
+    <None Include="Resources\endstory_in.bmp" />
+    <None Include="Resources\endstoryB.png" />
+    <None Include="Resources\endstoryBAD.png" />
+    <None Include="Resources\endstoryC.png" />
+    <None Include="Resources\endstoryDEAD.png" />
+    <None Include="Resources\endstoryEND.png" />
+    <None Include="Resources\endstoryS.png" />
+    <None Include="Resources\endstoryA.png" />
+    <None Include="Resources\bath_spill.mp3" />
+    <None Include="Resources\bed_move.mp3" />
+    <None Include="Resources\block_fall.mp3" />
+    <None Include="Resources\book_open.mp3" />
+    <None Include="Resources\box_max.mp3" />
+    <None Include="Resources\chain_cut.mp3" />
+    <None Include="Resources\chain_move.mp3" />
+    <None Include="Resources\chain_set.mp3" />
+    <None Include="Resources\chair_move.mp3" />
+    <None Include="Resources\display_on.mp3" />
+    <None Include="Resources\dool_fire.mp3" />
+    <None Include="Resources\door_open.mp3" />
+    <None Include="Resources\enddoor_open.mp3" />
+    <None Include="Resources\failed.mp3" />
+    <None Include="Resources\fall_key.mp3" />
+    <None Include="Resources\hidesafe_open.mp3" />
+    <None Include="Resources\light_move.mp3" />
+    <None Include="Resources\locker_open.mp3" />
+    <None Include="Resources\mato_put.mp3" />
+    <None Include="Resources\moneybox_open.mp3" />
+    <None Include="Resources\move.mp3" />
+    <None Include="Resources\object_lie.mp3" />
+    <None Include="Resources\plate_set.mp3" />
+    <None Include="Resources\prison_open.mp3" />
+    <None Include="Resources\clean_wall.mp3" />
+    <None Include="Resources\afstorymst5.bmp" />
+    <None Include="Resources\afstorymst6.bmp" />
+    <None Include="Resources\afstorymst7.bmp" />
+    <None Include="Resources\afstorysei.bmp" />
+    <None Include="Resources\afstorytou.bmp" />
+    <None Include="Resources\afstorykako.bmp" />
+    <None Include="Resources\afstorykb.bmp" />
+    <None Include="Resources\afstoryken.bmp" />
+    <None Include="Resources\afstoryko.bmp" />
+    <None Include="Resources\afstorykr.bmp" />
+    <None Include="Resources\afstoryky.bmp" />
+    <None Include="Resources\afstorymst1.bmp" />
+    <None Include="Resources\afstorymst2.bmp" />
+    <None Include="Resources\afstorymst3.bmp" />
+    <None Include="Resources\afstorymst4.bmp" />
+    <None Include="Resources\keyborad.mp3" />
+    <Content Include="Resources\RM7_b2.bmp" />
+    <None Include="Resources\mistery.png" />
+    <None Include="Resources\rm14writer.png" />
+    <None Include="Resources\misteryloc.png" />
+    <None Include="Resources\rm5optana.bmp" />
+    <None Include="Resources\rm5oprei.bmp" />
+    <None Include="Resources\RM5.bmp" />
+    <None Include="Resources\rm5tana.bmp" />
+    <None Include="Resources\rm5se.png" />
+    <None Include="Resources\rm5rei.bmp" />
+    <None Include="Resources\D20_1.png" />
+    <None Include="Resources\D21_1.png" />
+    <None Include="Resources\D21_3.png" />
+    <None Include="Resources\D21_2.png" />
+    <None Include="Resources\RM7_bule.png" />
+    <None Include="Resources\RM7_b.bmp" />
+    <None Include="Resources\RM7.bmp" />
+    <None Include="Resources\RM7_yellow.png" />
+    <None Include="Resources\RM7_red.png" />
+    <None Include="Resources\RM7_orange.png" />
+    <None Include="Resources\rm9yuka.png" />
+    <None Include="Resources\item21_1.png" />
+    <None Include="Resources\item21.png" />
+    <None Include="Resources\item21_3.png" />
+    <None Include="Resources\item21_2.png" />
+    <None Include="Resources\RM15.bmp" />
+    <None Include="Resources\rm15sentakusi.png" />
+    <None Include="Resources\rm9oyu.png" />
+    <None Include="Resources\rm9kubomi.png" />
+    <None Include="Resources\rm9kagi.png" />
+    <None Include="Resources\RM9.png" />
+    <None Include="Resources\rm1head_2.png" />
+    <None Include="Resources\rm1head_1.png" />
+    <None Include="Resources\item20_1.png" />
+    <None Include="Resources\item20.png" />
+    <None Include="Resources\item2.png" />
+    <None Include="Resources\rm9yogore.png" />
+    <None Include="Resources\UI .png" />
+    <None Include="Resources\rm10key1.png" />
+    <None Include="Resources\rm10loc2.bmp" />
+    <None Include="Resources\rm10pb4.png" />
+    <None Include="Resources\rm10pb3.png" />
+    <None Include="Resources\rm10pb2.png" />
+    <None Include="Resources\rm10pb1.png" />
+    <None Include="Resources\rm10opmato2.png" />
+    <None Include="Resources\rm10opmato.png" />
+    <None Include="Resources\rm10mato2.png" />
+    <None Include="Resources\rm10mato.png" />
+    <None Include="Resources\rm10loc.bmp" />
+    <None Include="Resources\rm10doba.png" />
+    <None Include="Resources\rm10box2.png" />
+    <None Include="Resources\rm10box.png" />
+    <None Include="Resources\RM10_2.bmp" />
+    <None Include="Resources\RM10_1.bmp" />
+    <None Include="Resources\rm10py8.png" />
+    <None Include="Resources\rm10py7.png" />
+    <None Include="Resources\rm10py6.png" />
+    <None Include="Resources\rm10py5.png" />
+    <None Include="Resources\rm10py4.png" />
+    <None Include="Resources\rm10py3.png" />
+    <None Include="Resources\rm10py2.png" />
+    <None Include="Resources\rm10py1.png" />
+    <None Include="Resources\rm10pr8.png" />
+    <None Include="Resources\rm10pr7.png" />
+    <None Include="Resources\rm10pr6.png" />
+    <None Include="Resources\rm10pr5.png" />
+    <None Include="Resources\rm10pr4.png" />
+    <None Include="Resources\rm10pr3.png" />
+    <None Include="Resources\rm10pr2.png" />
+    <None Include="Resources\rm10pr1.png" />
+    <None Include="Resources\rm10pb8.png" />
+    <None Include="Resources\rm10pb7.png" />
+    <None Include="Resources\rm10pb6.png" />
+    <None Include="Resources\rm10pb5.png" />
+    <None Include="Resources\rm1orangekey.png" />
+    <None Include="Resources\rm1dig.png" />
+    <None Include="Resources\rm3door.png" />
+    <None Include="Resources\RM3.png" />
+    <None Include="Resources\rm3nazo3.png" />
+    <None Include="Resources\rm3book.png" />
+    <None Include="Resources\rm3desk_char.png" />
+    <None Include="Resources\rm3desk_char2.png" />
+    <None Include="Resources\RM1_2.png" />
+    <None Include="Resources\RM1.png" />
+    <None Include="Resources\item17.png" />
+    <None Include="Resources\rm4moeru.png" />
+    <None Include="Resources\rm1nyu.png" />
+    <None Include="Resources\rm19in.png" />
+    <None Include="Resources\rm19telebule.png" />
+    <None Include="Resources\rm19tele.png" />
+    <None Include="Resources\rm19llanp_red.png" />
+    <None Include="Resources\rm19llanp_green.png" />
+    <None Include="Resources\rm19inyellow.png" />
+    <None Include="Resources\rm19inred.png" />
+    <None Include="Resources\rm19inpa.png" />
+    <None Include="Resources\rm19ingreen.png" />
+    <None Include="Resources\rm19inbule.png" />
+    <None Include="Resources\rm19hosi_25.png" />
+    <None Include="Resources\rm19hosi_24.png" />
+    <None Include="Resources\rm19hosi_23.png" />
+    <None Include="Resources\rm19hosi_22.png" />
+    <None Include="Resources\rm19hosi_21.png" />
+    <None Include="Resources\rm19hosi_20.png" />
+    <None Include="Resources\rm19hosi_19.png" />
+    <None Include="Resources\rm19hosi_18.png" />
+    <None Include="Resources\rm19hosi_17.png" />
+    <None Include="Resources\rm19hosi_16.png" />
+    <None Include="Resources\rm19hosi_15.png" />
+    <None Include="Resources\rm19hosi_14.png" />
+    <None Include="Resources\rm19hosi_12.png" />
+    <None Include="Resources\rm19hosi_11.png" />
+    <None Include="Resources\rm19hosi_10.png" />
+    <None Include="Resources\rm19hosi_9.png" />
+    <None Include="Resources\rm19hosi_8.png" />
+    <None Include="Resources\rm19hosi_7.png" />
+    <None Include="Resources\rm19hosi_6.png" />
+    <None Include="Resources\rm19hosi_5.png" />
+    <None Include="Resources\rm19hosi_4.png" />
+    <None Include="Resources\rm19hosi_3.png" />
+    <None Include="Resources\rm19hosi_2.png" />
+    <None Include="Resources\rm19hosi_1.png" />
+    <None Include="Resources\rm19bulekey.png" />
+    <None Include="Resources\rm19box_open.png" />
+    <None Include="Resources\rm19box.png" />
+    <None Include="Resources\rm19bal.png" />
+    <None Include="Resources\RM19.bmp" />
+    <None Include="Resources\rm19teleyellow.png" />
+    <None Include="Resources\rm19telered.png" />
+    <None Include="Resources\rm19telepa.png" />
+    <None Include="Resources\rm19telegreen.png" />
+    <None Include="Resources\rm6kamado_nazo8.png" />
+    <None Include="Resources\D22.png" />
+    <None Include="Resources\D22_2.png" />
+    <None Include="Resources\item22.png" />
+    <None Include="Resources\item22_2.png" />
+    <None Include="Resources\rm6pulet.png" />
+    <None Include="Resources\rm6nazo5.png" />
+    <None Include="Resources\rm6depression.png" />
+    <None Include="Resources\r6nazo5.png" />
+    <None Include="Resources\rm6dool_rf.png" />
+    <None Include="Resources\rm6dool_r.png" />
+    <None Include="Resources\rm6dool_l.png" />
+    <None Include="Resources\item15.png" />
+    <None Include="Resources\rm18box.png" />
+    <None Include="Resources\RM18.bmp" />
+    <None Include="Resources\rm18maki.png" />
+    <None Include="Resources\rm11l_move.png" />
+    <None Include="Resources\RM11.png" />
+    <None Include="Resources\rm11bed_1.png" />
+    <None Include="Resources\rm11redkey.png" />
+    <None Include="Resources\rm11light_sikaku.png" />
+    <None Include="Resources\rm11light_sann.png" />
+    <None Include="Resources\rm11light_maru.png" />
+    <None Include="Resources\rm11light_batu.png" />
+    <None Include="Resources\rm11bed_2.png" />
+    <None Include="Resources\light_mis.png" />
+    <None Include="Resources\item19.png" />
+    <None Include="Resources\item33.png" />
+    <None Include="Resources\item30.png" />
+    <None Include="Resources\item28.png" />
+    <None Include="Resources\item32.png" />
+    <None Include="Resources\i_ice1.png" />
+    <None Include="Resources\i_ice2.png" />
+    <None Include="Resources\ice2.png" />
+    <None Include="Resources\ice1.png" />
+    <None Include="Resources\rm14tyen.png" />
+    <None Include="Resources\rm14nazo13.png" />
+    <None Include="Resources\rm14icepape.png" />
+    <None Include="Resources\rm14dri.png" />
+    <None Include="Resources\rm14imgopen.png" />
+    <None Include="Resources\rm14img.png" />
+    <None Include="Resources\rm14imgset.png" />
+    <None Include="Resources\rm14imgbig_set.png" />
+    <None Include="Resources\rm14imgbig.png" />
+    <None Include="Resources\RM14.png" />
+    <None Include="Resources\rm14tansu2open.png" />
+    <None Include="Resources\rm14tansu1open.png" />
+    <None Include="Resources\rm14puleto.png" />
+    <None Include="Resources\rm14imgbigopen.png" />
+    <None Include="Resources\D3_2.png" />
+    <None Include="Resources\D3.png" />
+    <None Include="Resources\timers.png" />
+    <None Include="Resources\t0.png" />
+    <None Include="Resources\t5.png" />
+    <None Include="Resources\t4.png" />
+    <None Include="Resources\t3.png" />
+    <None Include="Resources\t2.png" />
+    <None Include="Resources\t1.png" />
+    <None Include="Resources\t9.png" />
+    <None Include="Resources\t8.png" />
+    <None Include="Resources\t7.png" />
+    <None Include="Resources\t6.png" />
+    <None Include="Resources\dead.png" />
+    <None Include="Resources\menu2.png" />
+    <None Include="Resources\orangekey.png" />
+    <None Include="Resources\bulekey.png" />
+    <None Include="Resources\yellowkey.png" />
+    <None Include="Resources\redkey.png" />
+    <None Include="Resources\rm16tyenbig_on3.png" />
+    <None Include="Resources\rm1moni.png" />
+    <None Include="Resources\rm1kaidan.png" />
+    <None Include="Resources\rm1moni_2.png" />
+    <None Include="Resources\rm16tyen5.png" />
+    <None Include="Resources\rm16tyen4.png" />
+    <None Include="Resources\rm17box_tyen4.png" />
+    <None Include="Resources\rm17box_tyen5.png" />
+    <None Include="Resources\矢印2.png" />
+    <None Include="Resources\矢印.png" />
+    <None Include="Resources\矢印3.png" />
+    <None Include="Resources\矢印4.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\RM17.bmp" />
+    <None Include="Resources\rm17tyen_put.png" />
+    <None Include="Resources\rm17key2.png" />
+    <None Include="Resources\rm17boxbigopen.png" />
+    <None Include="Resources\rm17boxbig.png" />
+    <None Include="Resources\rm17box_tyen3.png" />
+    <None Include="Resources\rm17box_tyen2.png" />
+    <None Include="Resources\rm17box_tyen1.png" />
+    <None Include="Resources\rm17box.png" />
+    <None Include="Resources\rm16book2.png" />
+    <None Include="Resources\rm16book1.png" />
+    <None Include="Resources\RM16_2.bmp" />
+    <None Include="Resources\RM16.bmp" />
+    <None Include="Resources\rm16tyenbig_on2.png" />
+    <None Include="Resources\rm16tyenbig_on.png" />
+    <None Include="Resources\rm16tyenbig.png" />
+    <None Include="Resources\rm16tyen3.png" />
+    <None Include="Resources\rm16tyen2.png" />
+    <None Include="Resources\rm16tyen1.png" />
+    <None Include="Resources\rm16key.png" />
+    <None Include="Resources\rm1ori1.png" />
+    <None Include="Resources\rm1ori2.png" />
+    <None Include="Resources\item36.png" />
+    <None Include="Resources\item34.png" />
+    <None Include="Resources\play2.png" />
+    <None Include="Resources\item37.png" />
+    <None Include="Resources\rm12tansu1.png" />
+    <None Include="Resources\rm12nazo14.png" />
+    <None Include="Resources\rm12moni_3.bmp" />
+    <None Include="Resources\rm12moni_2.png" />
+    <None Include="Resources\rm12moni_1.bmp" />
+    <None Include="Resources\rm12kinkobig_open.png" />
+    <None Include="Resources\rm12kinkobig.png" />
+    <None Include="Resources\rm12key.png" />
+    <None Include="Resources\rm12cube.png" />
+    <None Include="Resources\RM12.bmp" />
+    <None Include="Resources\rm12tansu2.png" />
+    <None Include="Resources\item35.png" />
+    <None Include="Resources\rm3kabe.png" />
+    <None Include="Resources\rm13hasigo.bmp" />
+    <None Include="Resources\bgm.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
