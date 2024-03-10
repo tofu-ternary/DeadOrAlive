@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Display\" />
+    <Folder Include="Resourse\ImageData\" />
     <Folder Include="Sound\" />
   </ItemGroup>
 
