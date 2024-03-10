@@ -9,12 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Display\" />
     <Folder Include="Sound\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resourse\ImageData\Title\title.png">
+    <None Update="Resourse\ImageData\Title\closebtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\Title\howtoplaybtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\Title\startbtn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\Title\bk_title.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

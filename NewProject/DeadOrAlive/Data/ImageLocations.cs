@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DeadOrAlive.Data.ImageLocation
+namespace DeadOrAlive.Data
 {
     /// <summary>
     /// 画像情報クラス

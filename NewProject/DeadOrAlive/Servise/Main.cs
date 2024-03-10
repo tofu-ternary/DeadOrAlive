@@ -11,13 +11,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeadOrAlive.Const;
 using DeadOrAlive.Data;
-using DeadOrAlive.Data.ImageLocation;
+using DeadOrAlive.Display;
 
 namespace DeadOrAlive.Servise
 {
     public partial class Main : Form
     {
         public Main() => InitializeComponent();
+
+        private readonly ManagementDisplay md = new();
+
+        private ManagementDisplay.CheckAreaEvent? checkArea;
+
+        private DisplayBase? display;
+
+        private bool isChangeDisplay = false;
 
         /// <summary>
         /// 画面初期処理
@@ -29,7 +37,16 @@ namespace DeadOrAlive.Servise
         /// <param name="e"></param>
         private void Main_Load(object sender, EventArgs e)
         {
+            display = ManagementDisplay.DisplayDic[DisplayName.Title];
 
+            checkArea += display.CheckAreaEvent;
+
+            display.LoadDisplayData(md);
+
+            isChangeDisplay = true;
+
+            // 画面再描画
+            Invalidate();
         }
 
         /// <summary>
@@ -44,13 +61,8 @@ namespace DeadOrAlive.Servise
         {
             // 押下位置の座標を取得
             Coordinates.SetPoint(e.X, e.Y);
-            // Debug.WriteLine($"{Coordinates.PointX},{Coordinates.PointY}");
 
-            // 座標チェック：START_BUTTON
-            if (Coordinates.IsArea(CnsCoordinateArea.START_BUTTON))
-            {
-                Debug.WriteLine("LET'S START!");
-            }
+            Debug.WriteLine($"X:{e.X} ,Y:{e.Y}");
 
             // 画面再描画
             Invalidate();
@@ -66,7 +78,15 @@ namespace DeadOrAlive.Servise
         /// <param name="e"></param>
         private void Main_Paint(object sender, PaintEventArgs e)
         {
-            TitleImgLocation.ImgTitle.DrawImg(e);
+            if (isChangeDisplay)
+            {
+                isChangeDisplay = false;
+                md.DisplayOnDefault(e);
+            }
+            else
+            {
+                md.UpdateDisplay(e, checkArea);
+            }
         }
     }
 }
