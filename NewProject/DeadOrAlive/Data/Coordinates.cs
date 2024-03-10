@@ -65,7 +65,7 @@ namespace DeadOrAlive.Data
 		{
 			RangeCheck(coordinate);
 
-			return (coordinate.MinX >= PointX) && (PointX <= coordinate.MaxX) && (coordinate.MinY >= PointY) && (PointY <= coordinate.MaxY);
+			return (coordinate.MinX <= PointX) && (PointX <= coordinate.MaxX) && (coordinate.MinY <= PointY) && (PointY <= coordinate.MaxY);
 		}
 	}
 }

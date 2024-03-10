@@ -35,6 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1024, 767);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -42,6 +43,7 @@
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "DEAD OR ALIVE";
             Load += Main_Load;
+            Paint += Main_Paint;
             MouseClick += Main_MouseClick;
             ResumeLayout(false);
         }

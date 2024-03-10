@@ -10,8 +10,13 @@
 
   <ItemGroup>
     <Folder Include="Display\" />
-    <Folder Include="Resourse\ImageData\" />
     <Folder Include="Sound\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resourse\ImageData\Title\title.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
