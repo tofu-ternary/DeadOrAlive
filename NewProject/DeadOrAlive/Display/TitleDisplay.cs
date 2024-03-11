@@ -31,7 +31,7 @@ namespace DeadOrAlive.Display
 
         private readonly List<ImageLocations> StateTitleImages =
         [
-            CnsImageLocation.ImgTitle,
+            CnsImageLocation.ImgBKTitle,
             CnsImageLocation.ImgHowToPlayBtn,
             CnsImageLocation.ImgStartBtn,
             CnsImageLocation.ImgCloseBtn
@@ -39,15 +39,15 @@ namespace DeadOrAlive.Display
 
         private readonly List<ImageLocations> StateHowToPlay1Images =
         [
-            CnsImageLocation.ImgTitle,
-            CnsImageLocation.ImgHowToPlayBtn,
-            CnsImageLocation.ImgCloseBtn
+            CnsImageLocation.ImgBKHowToPlay1,
+            CnsImageLocation.ImgArrowRightDefault,
+            CnsImageLocation.ImgArrowLeftBackBtn
         ];
 
         private readonly List<ImageLocations> StateHowToPlay2Images = 
         [
-            CnsImageLocation.ImgTitle,
-            CnsImageLocation.ImgCloseBtn
+            CnsImageLocation.ImgBKHowToPlay2,
+            CnsImageLocation.ImgArrowLeftBackBtn
         ];
 
         /// <summary>
@@ -114,16 +114,16 @@ namespace DeadOrAlive.Display
         /// </summary>
         public void AreaEventOnHowToPlay_1(ManagementDisplay md)
         {
-            // 座標チェック：CLOSE_BUTTON
-            if (Coordinates.IsArea(CnsCoordinateArea.CLOSE_BUTTON))
+            // 座標チェック：ARROW_LEFT_BACK_BTN
+            if (Coordinates.IsArea(CnsCoordinateArea.ARROW_LEFT_BACK_BTN))
             {
                 state = DisplayState.State_Title;
                 md.UpdateImages = StateTitleImages;
                 return;
             }
 
-            // 座標チェック：HOWTOPLAY_BUTTON
-            if (Coordinates.IsArea(CnsCoordinateArea.HOWTOPLAY_BUTTON))
+            // 座標チェック：ARROW_RIGHT_DEFAULT
+            if (Coordinates.IsArea(CnsCoordinateArea.ARROW_RIGHT_DEFAULT))
             {
                 state = DisplayState.State_HowToPlay_2;
                 md.UpdateImages = StateHowToPlay2Images;
@@ -136,8 +136,8 @@ namespace DeadOrAlive.Display
         /// </summary>
         public void AreaEventOnHowToPlay_2(ManagementDisplay md)
         {
-            // 座標チェック：CLOSE_BUTTON
-            if (Coordinates.IsArea(CnsCoordinateArea.CLOSE_BUTTON))
+            // 座標チェック：ARROW_LEFT_BACK_BTN
+            if (Coordinates.IsArea(CnsCoordinateArea.ARROW_LEFT_BACK_BTN))
             {
                 state = DisplayState.State_HowToPlay_1;
                 md.UpdateImages = StateHowToPlay1Images;

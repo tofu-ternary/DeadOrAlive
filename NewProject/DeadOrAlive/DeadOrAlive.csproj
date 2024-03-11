@@ -9,22 +9,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Resourse\ImageData\Input\" />
     <Folder Include="Sound\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resourse\ImageData\Title\closebtn.png">
+    <None Update="Resourse\ImageData\ArrowButton\arrow_btn_down.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resourse\ImageData\Title\howtoplaybtn.png">
+    <None Update="Resourse\ImageData\ArrowButton\arrow_btn_left.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resourse\ImageData\Title\startbtn.png">
+    <None Update="Resourse\ImageData\ArrowButton\arrow_btn_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\ArrowButton\arrow_btn_up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\Title\close_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\Title\how_to_play_btn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resourse\ImageData\Title\start_btn.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resourse\ImageData\Title\bk_title.png">
+    <None Update="Resourse\ImageData\Title\BK_title.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Resourse\ImageData\Title\BK_how_to_play_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+	<None Update="Resourse\ImageData\Title\BK_how_to_play_2.png">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
   </ItemGroup>
 
 </Project>

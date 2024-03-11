@@ -16,6 +16,26 @@ namespace DeadOrAlive.Const
 	public static class CnsCoordinateArea
 	{
         ////////////////////////
+        //      　矢印        
+        ////////////////////////
+
+        /// <summary> 上矢印 基本座標範囲 </summary>
+        public static readonly Coordinates.Coordinate ARROW_UP_DEFAULT = new() { MinX = 0, MaxX = 0, MinY = 0, MaxY = 0 };
+
+        /// <summary> 左矢印 基本座標範囲 </summary>
+        public static readonly Coordinates.Coordinate ARROW_LEFT_DEFAULT = new() { MinX = 0, MaxX = 0, MinY = 0, MaxY = 0 };
+
+        /// <summary> 右矢印 基本座標範囲 </summary>
+        public static readonly Coordinates.Coordinate ARROW_RIGHT_DEFAULT = new() { MinX = 900, MaxX = 1000, MinY = 300, MaxY = 400 };
+
+        /// <summary> 下矢印 基本座標範囲 </summary>
+        public static readonly Coordinates.Coordinate ARROW_DOWN_DEFAULT = new() { MinX = 0, MaxX = 0, MinY = 0, MaxY = 0 };
+
+        /// <summary> 左矢印 戻るボタン座標範囲 </summary>
+        public static readonly Coordinates.Coordinate ARROW_LEFT_BACK_BTN = new() { MinX = 0, MaxX = 100, MinY = 0, MaxY = 100 };
+
+
+        ////////////////////////
         //      タイトル        
         ////////////////////////
 
